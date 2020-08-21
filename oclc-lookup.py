@@ -11,7 +11,7 @@ import logging
 from datetime import date, timedelta, datetime
 
 #####NOTES
-#THE FILE NAME & PATH WITH THE OCLC NUMBERS IS HARDCODED (LINE 48)
+#THE FILE NAME & PATH WITH THE OCLC NUMBERS IS HARDCODED (LINE 49)
 #OUR IDENTIFIER TYPE UUID IS HARDCODED (LINE 56)
 #OUR OKAPI ENDPOINT, TENANT, USERID, PASSWORD HARDCODED (BELOW)
 
@@ -27,8 +27,8 @@ headers = {"x-okapi-tenant": tenant, "Content-type": "application/json"}
 
 #AUTHENTICATE
 user = {}
-user['username'] = "OKAPIID"
-user['password'] = "OKAPIPASSWORD"
+user['username'] = "----"
+user['password'] = "----"
 user['tenant'] = tenant
 the_data = json.dumps(user)
 response = requests.post(url + "/authn/login",the_data,headers=headers)
